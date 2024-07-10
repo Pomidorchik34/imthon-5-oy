@@ -1,0 +1,260 @@
+html {
+  scroll-behavior: smooth;
+  list-style: none;
+  width: 100%;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 1519px;
+  height: 5198px;
+  list-style: none;
+}
+select {
+  border: none;
+}
+a {
+  text-decoration: none;
+  color: #161c24;
+}
+.header {
+  width: auto;
+  display: flex;
+}
+.header_container {
+}
+nav {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+.container {
+  padding: 0px 100px;
+}
+.skidka {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  background-color: #454f5b;
+}
+.skidka p {
+  text-align: center;
+}
+.logo {
+  padding-right: 205px;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  padding-right: 350px;
+}
+.nav-item {
+}
+.nav-link {
+  text-wrap: nowrap;
+}
+.icons-tel {
+  text-wrap: nowrap;
+  display: flex;
+  gap: 30px;
+}
+.main_container {
+}
+.location {
+  margin-top: 20px;
+}
+.cards-container {
+}
+.all-in-one {
+  display: flex;
+  gap: 30px;
+}
+.heading {
+  font-size: 28px;
+}
+.all {
+}
+.options {
+  display: flex;
+  justify-content: space-between;
+}
+.btn1 {
+  background-color: transparent;
+  border: 1px solid #add7ff;
+  width: 299.6px;
+  padding: 7px 72px;
+}
+.btn2 {
+}
+.filter {
+  margin-top: 32px;
+  padding: 24px;
+  width: 250px;
+  height: 530px;
+  border: 1px solid #c4cdd5;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: -53px;
+  gap: 30px;
+}
+.price {
+  width: 240px;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-opt {
+  border-bottom: 1px solid #c4cdd5;
+}
+.inputs {
+  display: flex;
+  gap: 8px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c4cdd5;
+}
+.input1 {
+  width: 95px;
+  height: 44px;
+  border: none;
+  padding-left: 11px;
+  border: 1px solid rgb(221, 221, 221);
+  outline: #add7ff;
+}
+.input2 {
+  width: 95px;
+  height: 44px;
+  border: none;
+  padding-left: 11px;
+  border: 1px solid rgb(221, 221, 221);
+  outline: #add7ff;
+}
+
+.card {
+  width: 288px;
+  height: 453px;
+  position: relative;
+  margin-bottom: 70px;
+}
+.div1 {
+  position: relative;
+  bottom: -80px;
+}
+.has {
+  padding-left: 5px;
+}
+.Sale {
+  position: relative;
+  bottom: -15px;
+  padding-left: 85px;
+}
+.gift {
+  position: relative;
+  bottom: -80px;
+}
+.bg {
+  border: 1px solid #c4cdd5;
+  border-bottom: none;
+  position: relative;
+  z-index: -1;
+}
+.div2 {
+  border: 1px solid #c4cdd5;
+  border-top: none;
+  width: 288px;
+  position: relative;
+  top: -5px;
+}
+.ot {
+  padding-left: 10px;
+}
+.name {
+  padding-left: 10px;
+}
+.price {
+  padding-left: 10px;
+}
+
+.cont {
+  position: relative;
+  left: -98px;
+  padding-bottom: 146px;
+  padding-top: 170px;
+}
+.heading-ned {
+  font-size: 44px;
+}
+.cards-ned {
+  position: relative;
+  top: -40px;
+  display: flex;
+  gap: 30px;
+}
+
+.about {
+  margin-bottom: 82px;
+  display: flex;
+  gap: 30px;
+}
+.about-text {
+  gap: 24px;
+}
+.about-text p {
+  color: #454f5b;
+  font-size: 18px;
+}
+.about-heading {
+}
+.about-p1 {
+}
+.about-chks {
+  font-size: 20px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  width: 502;
+}
+.about-chks p {
+  text-wrap: none;
+}
+.chk {
+}
+.about-p2 {
+}
+.about-img {
+}
+.footer-cnotainer {
+}
+.d {
+  background-color: #f2f8ff;
+}
+.footer-heading {
+}
+.footer-p {
+}
+.footer-inputs {
+}
+.form-inputs-btn {
+}
+.footer-contacts {
+}
+.logo-social-links {
+}
+.footer-nav {
+}
+.footer-nav-list {
+}
+.f-list-item {
+}
+.f-list-link {
+}
