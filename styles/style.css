@@ -236,23 +236,72 @@ nav {
 .footer-cnotainer {
 }
 .d {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #f2f8ff;
 }
 .footer-heading {
+  padding-top: 64px;
+  margin: 0;
+  font-size: 44px;
 }
 .footer-p {
+  text-align: center;
+  color: #454f5b;
 }
 .footer-inputs {
+  padding-bottom: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.footer-inputs input {
+  border: none;
+  background-color: #161c240a;
+  width: 220px;
+  padding-left: 20px;
+  height: 50px;
 }
 .form-inputs-btn {
+  color: white;
+  padding: 12px 70px;
+  background-color: #4295e4;
+}
+.a {
+  display: flex;
+  background-color: #0d2436;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.b {
+  display: flex;
+  gap: 97px;
+  color: white;
+}
+.b a {
+  color: white;
 }
 .footer-contacts {
 }
 .logo-social-links {
+  height: 277px;
+  width: 105.6px;
+  height: 88px;
 }
 .footer-nav {
+  position: relative;
+  display: flex;
+  gap: 97px;
 }
 .footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
 }
 .f-list-item {
 }
