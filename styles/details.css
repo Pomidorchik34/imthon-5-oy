@@ -1,0 +1,56 @@
+html {
+  width: 1480px;
+}
+.main {
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.container {
+}
+.main-container {
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.main-text {
+}
+.main-heading {
+  font-size: 40px;
+  font-weight: 600;
+}
+.main-p {
+  color: #454f5b;
+}
+.main-p1 {
+  color: #454f5b;
+}
+.price {
+  padding: 0%;
+}
+.div222 {
+  display: flex;
+  gap: 30px;
+}
+.newPrice {
+  font-weight: 700;
+  font-size: 25px;
+}
+.oldPrice {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 25px;
+}
+.div22 {
+}
+.div2222 {
+  width: 77px;
+  height: 1.6px;
+  position: relative;
+  left: -110px;
+  bottom: -42.5px;
+}
+body {
+  height: 600px;
+}

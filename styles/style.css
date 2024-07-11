@@ -11,7 +11,7 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   width: 1519px;
-  height: 5198px;
+  height: 4098px;
   list-style: none;
 }
 select {
@@ -139,19 +139,36 @@ nav {
   border: 1px solid rgb(221, 221, 221);
   outline: #add7ff;
 }
-
+.filter-select {
+  z-index: 10;
+  border: 2px solid #c4cdd5;
+}
 .card {
   width: 288px;
   height: 453px;
   position: relative;
-  margin-bottom: 70px;
+  transition: 0.3s;
 }
 .div1 {
   position: relative;
   bottom: -80px;
 }
 .has {
-  padding-left: 5px;
+  background-color: white;
+  padding: 2px 5px 0px 0px;
+  margin-left: 5px;
+}
+.old-price {
+  font-weight: 300;
+  color: #454f5b;
+}
+.div22 {
+  height: 1px;
+  width: 50px;
+  background-color: #454f5b;
+  margin-right: 40px;
+  position: relative;
+  left: -69px;
 }
 .Sale {
   position: relative;
@@ -180,11 +197,18 @@ nav {
 }
 .name {
   padding-left: 10px;
+  margin-bottom: 0px;
 }
 .price {
+  margin-top: 10px;
+  height: 24px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+.otziv {
+  margin-top: 0px;
   padding-left: 10px;
 }
-
 .cont {
   position: relative;
   left: -98px;
