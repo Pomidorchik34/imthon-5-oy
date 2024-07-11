@@ -50,12 +50,9 @@
             >
 
             <img src="./images/Frame.svg" alt="" width="32px" height="32px" />
-            <img
-              src="./images/Frame (1).svg"
-              alt=""
-              width="32px"
-              height="32px"
-            />
+            <a href="./cart.html"
+              ><img src="./images/Frame (1).svg" width="32px" height="32px"
+            /></a>
           </div>
         </nav>
       </div>
@@ -63,17 +60,27 @@
     <main class="container main_container">
       <div class="location">Главная / Каталог</div>
       <div class="cards-container">
+        <form class="options">
+          <button class="btn1">Сбросить фильтры</button>
+          <label class="option1">
+            <input type="radio" name="filter" id="oneMostCheck" />Известный
+          </label>
+          <label class="option2"
+            ><input
+              type="radio"
+              name="filter"
+              id="oneMostCheck"
+            />Средний</label
+          >
+          <label class="option3">
+            <input type="radio" name="filter" id="oneMostCheck" />Не попудярен
+          </label>
+          <label class="option4">
+            <input type="radio" checked name="filter" id="oneMostCheck" />все
+          </label>
+        </form>
         <h1 class="heading">Накладные электронные замки(854)</h1>
         <div class="all">
-          <div class="options">
-            <button class="btn1">Сбросить фильтры</button>
-            <select name="" class="filter-select" id="select">
-              <option value="">все</option>
-              <option value="известный">Известный</option>
-              <option value="средний">Средний</option>
-              <option value="не популярен">Не популярен</option>
-            </select>
-          </div>
           <div class="all-in-one">
             <div class="filter">
               <h1 class="filter-heading">Фильтр</h1>

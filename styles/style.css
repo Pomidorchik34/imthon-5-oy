@@ -82,6 +82,7 @@ nav {
 .all {
 }
 .options {
+  z-index: 10;
   display: flex;
   justify-content: space-between;
 }
@@ -144,6 +145,7 @@ nav {
   border: 2px solid #c4cdd5;
 }
 .card {
+  z-index: 0;
   width: 288px;
   height: 453px;
   position: relative;
@@ -207,7 +209,15 @@ nav {
 }
 .otziv {
   margin-top: 0px;
-  padding-left: 10px;
+  padding-left: 100px;
+}
+.stars {
+  color: gold;
+  font-size: 20px;
+  margin-bottom: 0px;
+  position: relative;
+  bottom: -24px;
+  left: 7px;
 }
 .cont {
   position: relative;
@@ -330,4 +340,86 @@ nav {
 .f-list-item {
 }
 .f-list-link {
+}
+
+#loader {
+  position: relative;
+  top: 200px;
+  left: 650px;
+}
+
+.btn-main-details {
+  position: relative;
+  bottom: -100px;
+  left: -365px;
+  height: 24px;
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  padding: 24px 74px;
+  color: white;
+  background-color: #4295e4;
+  transition: 0.3;
+  &:active {
+    background-color: #454f5b;
+  }
+}
+
+.options {
+  display: flex;
+}
+.btn1 {
+}
+.option1 {
+  background-color: #454f5b;
+  color: white;
+  margin: 0%;
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 12px;
+  padding-bottom: 10px;
+}
+.option2 {
+  background-color: #454f5b;
+  color: white;
+  margin: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 12px;
+  padding-bottom: 10px;
+}
+.option3 {
+  background-color: #454f5b;
+  color: white;
+  margin: 0%;
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 12px;
+  padding-bottom: 10px;
+}
+.option4 {
+  background-color: #454f5b;
+  color: white;
+  margin: 0%;
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 12px;
+  padding-bottom: 10px;
+}
+.option1 input {
+  margin-bottom: 0;
+}
+.option2 input {
+  margin-bottom: 0;
+}
+.option3 input {
+  margin-bottom: 0;
+}
+.option4 input {
+  margin-bottom: 0;
 }

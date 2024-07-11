@@ -1,5 +1,9 @@
 const wrapper = document.querySelector(".cards");
 const nedavno = document.querySelector(".cards-ned");
+const option1 = document.querySelector(".option1");
+const option2 = document.querySelector(".option2");
+const option3 = document.querySelector(".option3");
+const option4 = document.querySelector(".option4");
 
 let Stor = [];
 fetch("../products.json")
@@ -9,10 +13,23 @@ fetch("../products.json")
   .then((data) => {
     let dataId = localStorage.getItem("nedIds");
     let nedIds = JSON.parse(dataId);
-    console.log(nedIds);
     let i = 0;
     data.forEach((product) => {
+      if (i == 12) {
+        return;
+      }
       if (localStorage.getItem("nedId") == product.id) {
+        localStorage.setItem("Storage", Stor);
+        if (localStorage.getItem("arr")) {
+          let arr = JSON.parse(localStorage.getItem("arr"));
+          arr.push(Stor);
+          localStorage.setItem("arr", JSON.stringify(arr));
+          console.log(typeof arr);
+        } else {
+          let arr = [];
+          arr.push(Stor);
+          localStorage.setItem("arr", JSON.stringify(arr));
+        }
         let nedCard = createCard(product);
         nedavno.innerHTML += nedCard;
         Stor.push({
@@ -24,33 +41,13 @@ fetch("../products.json")
           isExist: false,
           comments: 17,
         });
-        localStorage.setItem("Storage", Stor);
       }
-
-      if (i == 12) {
-        return;
+      function ccim() {
+        let card = createCard(product);
+        wrapper.innerHTML += card;
+        i++;
       }
-      let card = createCard(product);
-      wrapper.innerHTML += card;
-      i++;
-      const products = document.querySelector(".cards");
-      const select = document.querySelector(".filter-select");
-      select.addEventListener("change", (event) => {
-        const selected = event.target.value;
-
-        for (let i = 0; i < products.children.length; i++) {
-          const product = products.children[i];
-          if (selected == none) {
-            product.style.display = "block";
-          } else {
-            if (product.type !== selected) {
-              product.style.display = "none";
-            } else {
-              product.style.display = "block";
-            }
-          }
-        }
-      });
+      ccim();
     });
 
     const nedCards = document.querySelectorAll(".card");
@@ -68,20 +65,51 @@ fetch("../products.json")
         const cardId = this.getAttribute("data-id");
         if (cardId) {
           window.location.assign(
-            `http://127.0.0.1:5500/details.html?id=${cardId}`
+            `http://127.0.0.1:5501/main-details.html?id=${cardId}`
           );
         }
       });
     });
+
+    // option2.addEventListener("click", (event) => {
+    // if (product.category == "средний") {
+    //   wrapper.innerHTML = "";
+    //   let card = createCard(product);
+    //   wrapper.innerHTML += card;
+    //   i++;
+    // }
+    // });
+    // option1.addEventListener("click", (event) => {
+    // if (product.category == "не популярен") {
+    //   wrapper.innerHTML = "";
+    //   let card = createCard(product);
+    //   wrapper.innerHTML += card;
+    //   i++;
+    // }
+    // });
+    // option3.addEventListener("click", (event) => {
+    // if (product.category == "известный") {
+    //   wrapper.innerHTML = "";
+    //   let card = createCard(product);
+    //   wrapper.innerHTML += card;
+    //   i++;
+    // }
+    // });
+    // option4.addEventListener("checked", (event) => {
+    // wrapper.innerHTML = "";
+    // let card = createCard(product);
+    // wrapper.innerHTML += card;
+    // i++;
+    // });
   });
 const cards = document.querySelector(".cards");
 
 function createCard(element) {
   let isExist;
   if (element.isExist) {
-    isExist = "/images/В наличии (1).svg";
-  } else {
     isExist = "/images/В наличии (2).svg";
+  } else {
+    isExist = "/images/В наличии (1).svg";
   }
   return `<div class="card" data-id="${element.id}" id="${element.category}">
     <div class="div1">
@@ -89,13 +117,19 @@ function createCard(element) {
           <img class="Sale" src="./images/Frame 84.svg" alt="" />
     </div>
           <img class="gift" src="./images/Frame 85.svg" alt="" />
-          <img class="bg" src="${element.image}" alt="" width="288px" height="320px" />
+          <img class="bg" src="${
+            element.image
+          }" alt="" width="288px" height="320px" />
     <div class="div2">
+    <span class="stars">${"★".repeat(Math.round(element.star))}
+                ${"☆".repeat(5 - Math.round(element.star))}</span>
             <p class="otziv">(${element.comments}) отзывов</p>
                   <p class="name">
                     ${element.name}
                   </p>
-                  <h3 class="price">${element.newPrice}₽<p class="old-price">${element.oldPrice}₽<div class="div22"></div></h3>
+                  <h3 class="price">${element.newPrice}₽<p class="old-price">${
+    element.oldPrice
+  }₽<div class="div22"></div></h3>
     </div>
               </div>`;
 }
@@ -131,3 +165,71 @@ function createDetails(element) {
         </div>
       </div>`;
 }
+// function addToCart(productId) {
+//   if (ned.includes(productId) == true) {
+//     return;
+//   }
+//   if (localStorage.getItem("ned")) {
+//     const ned = JSON.parse(localStorage.getItem("ned"));
+//     ned.push(productId);
+//     localStorage.setItem("ned", JSON.stringify(ned));
+//   } else {
+//     let ned = [];
+
+//     ned.push(productId);
+//     localStorage.setItem("ned", JSON.stringify(ned));
+//   }
+// }
+
+// for (let i = 0; i < products.children.length; i++) {
+//   const product = products.children[i];
+//   if (selected == none) {
+//     product.style.display = "block";
+//   } else {
+//     if (product.type !== selected) {
+//       product.style.display = "none";
+//     } else {
+//       product.style.display = "block";
+//     }
+//   }
+// }
+
+// select.addEventListener("change", (event) => {
+//   const selected = event.target.value;
+//   // wrapper.innerHTML = "";
+//   data.forEach((value) => {
+//     if (i == 12) {
+//       return;
+//     }
+//     // let card = createCard(value);
+//     // wrapper.innerHTML += card;
+//   });
+//   i++;
+
+//   // const products = document.querySelector(".cards");
+// });
+
+// if (selected == "all") {
+//   ccim();
+// }
+// if (selected == "средний") {
+//   if (product.category == "средний") {
+//     let card = createCard(product);
+//     wrapper.innerHTML += card;
+//     i++;
+//   }
+// }
+// if (selected == "не популярен") {
+//   if (product.category == "не популярен") {
+//     let card = createCard(product);
+//     wrapper.innerHTML += card;
+//     i++;
+//   }
+// }
+// if (selected == "известный") {
+//   if (product.category == "известный") {
+//     let card = createCard(product);
+//     wrapper.innerHTML += card;
+//     i++;
+//   }
+// }

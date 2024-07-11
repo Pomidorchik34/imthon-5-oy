@@ -1,16 +1,18 @@
 import { getData } from "../src/functions.js";
 
-function createDetails(element) {
+const cartBtn = document.querySelector(".btn-main-details");
+
+function createDetails(product) {
   return `<div class="container main-container">
         <img
-          src="${element.image}"
+          src="${product.image}"
           width="600"
           height="600"
-          alt=""
+          alt="Birincchi rasmni linki ishlamayapti"
         />
         <div class="main-text">
           <h1 class="main-heading">
-            ${element.name}
+            ${product.name}
           </h1>
           <p class="main-p">
             Замок дверной электронный Golden Soft <br />
@@ -23,15 +25,41 @@ function createDetails(element) {
           </p>
           <p class="price">Цена</p>
           <div class="div222">
-            <p class="newPrice">${element.newPrice}P</p>
-            <p class="oldPrice">${element.oldPrice}P</p>
+            <p class="newPrice">${product.newPrice}P</p>
+            <p class="oldPrice">${product.oldPrice}P</p>
             <div class="div22 div2222"></div>
+            <button isExist="${product.isExist}" class="btn-main-details" id="detail-btn">В КОРЗИНУ</button>
           </div>
         </div>
       </div>`;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  function addToCart(productId) {
+    if (localStorage.getItem("cart")) {
+      const cart = JSON.parse(localStorage.getItem("cart"));
+      if (cart.includes(productId) == true) {
+        alert("Savatda sahlngan");
+        return;
+      } else {
+        console.log(cart.push(productId));
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert("Savatga saqlandi!");
+    } else {
+      let cart = [];
+      if (cart.includes(productId) == true) {
+        alert("Savatda sahlngan");
+        return;
+      } else {
+        console.log(cart.push(productId));
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert("Savatga saqlandi!");
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+  }
+
   let url = window.location.href;
   let id = url.split("id=")[1];
 
@@ -41,11 +69,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   getData(`https://cars-pagination.onrender.com/products/${id}`)
     .then((data) => {
-      const main = document.querySelector(".main");
       console.log(data);
+      const main = document.querySelector(".main");
+
       let item = createDetails(data);
-      console.log(item);
       main.innerHTML = item;
+      const btn = document.getElementById("detail-btn");
+
+      btn.addEventListener("click", (event) => {
+        addToCart(data.id);
+      });
     })
     .catch((err) => {
       console.log(err);
