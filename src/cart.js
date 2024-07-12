@@ -1,5 +1,5 @@
 const main = document.querySelector(".main-cart");
-fetch("../products.json")
+fetch("https://cars-pagination.onrender.com/products")
   .then((response) => {
     return response.json();
   })

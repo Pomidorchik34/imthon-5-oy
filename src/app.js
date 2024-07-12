@@ -6,7 +6,7 @@ const option3 = document.querySelector(".option3");
 const option4 = document.querySelector(".option4");
 
 let Stor = [];
-fetch("../products.json")
+fetch("https://cars-pagination.onrender.com/products")
   .then((response) => {
     return response.json();
   })
